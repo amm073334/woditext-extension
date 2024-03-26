@@ -1,0 +1,25 @@
+{
+  "name": "woditext",
+  "displayName": "woditext",
+  "description": "syntax highlighting for woditext",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "woditext",
+      "aliases": ["woditext", "woditext"],
+      "extensions": [".wod"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "woditext",
+      "scopeName": "source.woditext",
+      "path": "./syntaxes/woditext.tmLanguage.json"
+    }]
+  }
+}
