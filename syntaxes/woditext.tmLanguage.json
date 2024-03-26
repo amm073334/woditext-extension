@@ -2,18 +2,18 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "woditext",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+		{"include": "#keywords"},
+		{"include": "#strings"},
+		{"include": "#numbers"},
+		{"include": "#types"},
+		{"include": "#comments"},
+		{"include": "#functions"}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.woditext",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(if|while|loop|ループ|return|break|ループ中断|continue|ループ開始へ)\\b"
 			}]
 		},
 		"strings": {
@@ -24,6 +24,38 @@
 				{
 					"name": "constant.character.escape.woditext",
 					"match": "\\\\."
+				}
+			]
+		},
+        "numbers": {
+			"patterns": [
+				{
+                    "name": "constant.numeric.decimal.woditext",
+					"match": "\\b[0-9]+\\b"
+				}
+			]
+		},
+        "types": {
+			"patterns": [
+				{
+                    "name": "storage.type.built-in.primitive.woditext",
+					"match": "\\b(void|int|str)\\b"
+				}
+			]
+		},
+        "comments": {
+			"patterns": [
+				{
+                    "name": "comment.line.double-slash.woditext",
+					"match": "//.*$"
+				}
+			]
+		},
+        "functions": {
+			"patterns": [
+				{
+                    "name": "entity.name.function.woditext",
+					"match": "[_a-zA-Z][_a-zA-Z0-9]*\\s*(?=\\(.*\\))"
 				}
 			]
 		}
