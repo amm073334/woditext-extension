@@ -3,9 +3,10 @@
 	"name": "woditext",
 	"patterns": [
 		{"include": "#keywords"},
+		{"include": "#types"},
+		{"include": "#wevc"},
 		{"include": "#strings"},
 		{"include": "#numbers"},
-		{"include": "#types"},
 		{"include": "#comments"},
 		{"include": "#functions"},
 		{"include": "#variables"}
@@ -14,8 +15,24 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.woditext",
-				"match": "\\b(if|else|while|loop|ループ|return|break|ループ中断|continue|ループ開始へ)\\b"
+				"match": "\\b(if|else|goto|while|loop|ループ|return|break|ループ中断|continue|ループ開始へ)\\b"
 			}]
+		},
+        "wevc": {
+			"patterns": [
+				{
+                    "name": "storage.type.woditext",
+					"match": "\\bwevc\\b"
+				}
+			]
+		},
+        "types": {
+			"patterns": [
+				{
+                    "name": "storage.type.built-in.primitive.woditext",
+					"match": "\\b(void|int|str)\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.woditext",
@@ -33,14 +50,6 @@
 				{
                     "name": "constant.numeric.decimal.woditext",
 					"match": "\\b[0-9]+\\b"
-				}
-			]
-		},
-        "types": {
-			"patterns": [
-				{
-                    "name": "storage.type.built-in.primitive.woditext",
-					"match": "\\b(void|int|str)\\b"
 				}
 			]
 		},
@@ -63,7 +72,7 @@
         "variables": {
 			"patterns": [
 				{
-                    "name": "variable",
+                    "name": "variable.woditext",
 					"match": "[_a-zA-Z][_a-zA-Z0-9]*"
 				}
 			]
