@@ -7,13 +7,14 @@
 		{"include": "#numbers"},
 		{"include": "#types"},
 		{"include": "#comments"},
-		{"include": "#functions"}
+		{"include": "#functions"},
+		{"include": "#variables"}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.woditext",
-				"match": "\\b(if|while|loop|ループ|return|break|ループ中断|continue|ループ開始へ)\\b"
+				"match": "\\b(if|else|while|loop|ループ|return|break|ループ中断|continue|ループ開始へ)\\b"
 			}]
 		},
 		"strings": {
@@ -56,6 +57,14 @@
 				{
                     "name": "entity.name.function.woditext",
 					"match": "[_a-zA-Z][_a-zA-Z0-9]*\\s*(?=\\(.*\\))"
+				}
+			]
+		},
+        "variables": {
+			"patterns": [
+				{
+                    "name": "variable",
+					"match": "[_a-zA-Z][_a-zA-Z0-9]*"
 				}
 			]
 		}
