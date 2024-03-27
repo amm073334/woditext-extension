@@ -65,7 +65,7 @@
 			"patterns": [
 				{
                     "name": "entity.name.function.woditext",
-					"match": "[_a-zA-Z][_a-zA-Z0-9]*\\s*(?=\\(.*\\))"
+					"match": "\\b[^\\d\\W]\\w*\\b(?=\\s*\\()"
 				}
 			]
 		},
@@ -73,7 +73,7 @@
 			"patterns": [
 				{
                     "name": "variable.woditext",
-					"match": "[_a-zA-Z][_a-zA-Z0-9]*"
+					"match": "\\b[^\\d\\W]\\w*\\b"
 				}
 			]
 		}
