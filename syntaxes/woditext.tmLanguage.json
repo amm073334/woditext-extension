@@ -30,7 +30,7 @@
 			"patterns": [
 				{
                     "name": "storage.type.built-in.primitive.woditext",
-					"match": "\\b(void|int|str)\\b"
+					"match": "\\b(void|ボイド|int|整数|str|文字列)\\b"
 				}
 			]
 		},
