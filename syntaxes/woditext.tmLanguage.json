@@ -2,12 +2,12 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "woditext",
 	"patterns": [
+		{"include": "#comments"},
 		{"include": "#keywords"},
 		{"include": "#types"},
 		{"include": "#wevc"},
 		{"include": "#strings"},
 		{"include": "#numbers"},
-		{"include": "#comments"},
 		{"include": "#functions"},
 		{"include": "#variables"}
 	],
