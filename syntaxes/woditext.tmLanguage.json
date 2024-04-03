@@ -4,8 +4,6 @@
 	"patterns": [
 		{"include": "#comments"},
 		{"include": "#keywords"},
-		{"include": "#types"},
-		{"include": "#storage"},
 		{"include": "#strings"},
 		{"include": "#numbers"},
 		{"include": "#functions"},
@@ -16,23 +14,19 @@
 			"patterns": [{
 				"name": "keyword.control.woditext",
 				"match": "\\b(if|else|goto|while|loop|ループ|return|break|ループ中断|continue|ループ開始へ)\\b"
-			}]
-		},
-        "storage": {
-			"patterns": [
-				{
-                    "name": "storage.type.woditext",
-					"match": "\\b(wevc|UDB|CDB|SDB|V[1-9]?|S|SYS|SYSS)\\b"
-				}
-			]
-		},
-        "types": {
-			"patterns": [
-				{
-                    "name": "storage.type.built-in.primitive.woditext",
-					"match": "\\b(void|ボイド|int|整数|str|文字列)\\b"
-				}
-			]
+			},
+            {
+                "name": "constant.language.woditext",
+                "match": "\\b(true|false)\\b"
+            },
+            {
+                "name": "storage.type.woditext",
+                "match": "\\b(wevc|UDB|CDB|SDB|V[1-9]?|S|SYS|SYSS)\\b"
+            },
+            {
+                "name": "storage.type.built-in.primitive.woditext",
+                "match": "\\b(void|ボイド|int|整数|str|文字列)\\b"
+            }]
 		},
 		"strings": {
 			"name": "string.quoted.double.woditext",
