@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.woditext",
-				"match": "\\b(if|else|goto|while|loop|ループ|return|break|ループ中断|continue|ループ開始へ)\\b"
+				"match": "\\b(if|else|loop|ループ|return|break|ループ中断|continue|ループ開始へ)\\b"
 			},
             {
                 "name": "constant.language.woditext",
@@ -21,7 +21,7 @@
             },
             {
                 "name": "storage.type.woditext",
-                "match": "\\b(wevc|UDB|CDB|SDB|V[1-9]?|S|SYS|SYSS)\\b"
+                "match": "\\b(UDB|CDB|SDB)\\b"
             },
             {
                 "name": "storage.type.built-in.primitive.woditext",
@@ -31,13 +31,7 @@
 		"strings": {
 			"name": "string.quoted.double.woditext",
 			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.woditext",
-					"match": "\\\\."
-				}
-			]
+			"end": "\""
 		},
         "numbers": {
 			"patterns": [
